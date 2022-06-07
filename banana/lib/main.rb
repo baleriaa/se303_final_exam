@@ -5,6 +5,7 @@
 
 def word_count(beginning, middle, conclusion)
   Word.new(beginning, middle, conclusion)
+  return beginning.split.size + middle.split.size + conclusion.split.size
 end
 
 def letter_count(beginning, middle, conclusion)
@@ -26,15 +27,21 @@ end
 
 class Word < Count
   def initialize(beginning, middle, conclusion)
-
+    super(beginning, middle, conclusion)
   end
+
+
 end
 
 class Letter < Count
-
+  def initialize(beginning, middle, conclusion)
+    super(beginning, middle, conclusion)
+  end
 end
 
 class Period < Count
-
+  def initialize(beginning, middle, conclusion)
+    super(beginning, middle, conclusion)
+  end
 end
 
