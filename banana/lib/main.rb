@@ -4,17 +4,37 @@
 #       write.
 
 def word_count(beginning, middle, conclusion)
-  beginning.split.size +
-  middle.split.size +
-  conclusion.split.size
+  Word.new(beginning, middle, conclusion)
 end
 
 def letter_count(beginning, middle, conclusion)
-  beginning.size + middle.size + conclusion.size
+  Letter.new(beginning, middle, conclusion)
 end
 
 def period_count(beginning, middle, conclusion)
-  beginning.scan(/\./).size +
-  middle.scan(/\./).size +
-  conclusion.scan(/\./).size
+  Period.new(beginning, middle, conclusion)
 end
+
+class Count
+  def initialize(beginning, middle, conclusion)
+    @beginning = beginning
+    @middle = middle
+    @conclusion = conclusion
+  end
+end
+
+
+class Word < Count
+  def initialize(beginning, middle, conclusion)
+
+  end
+end
+
+class Letter < Count
+
+end
+
+class Period < Count
+
+end
+
