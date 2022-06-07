@@ -4,8 +4,8 @@
 #       write.
 
 def word_count(beginning, middle, conclusion)
-  Word.new(beginning, middle, conclusion)
-  return beginning.split.size + middle.split.size + conclusion.split.size
+  word = Word.new(beginning, middle, conclusion)
+  word.beginning.split.size + word.middle.split.size + word.conclusion.split.size
 end
 
 def letter_count(beginning, middle, conclusion)
